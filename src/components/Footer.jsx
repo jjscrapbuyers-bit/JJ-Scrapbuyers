@@ -72,11 +72,11 @@ export default function Footer() {
             {/* BRAND */}
             <div>
               <Image
-                src="/finalfooter.png"
+                src="/finallogo2.png"
                 alt="Logo"
-                width={100}
-                height={60}
-                className="opacity-90"
+                width={80}
+                height={70}
+                className="opacity-90 "
               />
               <p
                 className="text-[12px] mt-2 leading-[1.8] max-w-[260px] line-clamp-2"
@@ -172,7 +172,7 @@ export default function Footer() {
           <div className="flex flex-col gap-6 lg:hidden">
             {/* Brand */}
             <div className="mobile-section">
-              <Image src="/finalfooter.png" alt="Logo" width={90} height={54} />
+              <Image src="/finallogo2.png" alt="Logo" width={90} height={54} />
               <p
                 className="text-[12px] mt-3 leading-[1.8]"
                 style={{ color: "rgba(242,240,230,0.55)" }}

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 const STORY_IMAGE =
-  "/hero-scarp2.jpg";
+  "/hero-scarp3.jpg";
 
 const TIMELINE = [
   {
@@ -134,7 +134,7 @@ export default function OurStory() {
 
               <div className="relative w-full h-full overflow-hidden z-[2]">
                 <Image
-                  src="/hero-scrap2.jpg"
+                  src="/hero-scrap3.jpg"
 alt="JJ Scrapbuyers Chennai scrap yard metal collection and recycling"                  fill
                   className="object-cover"
                 />
