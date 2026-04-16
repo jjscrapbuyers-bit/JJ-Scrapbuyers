@@ -2,6 +2,7 @@ import "./globals.css";
 import { Fraunces, Outfit } from "next/font/google";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import CallButton from "@/components/Phonecall";
+import Script from "next/script";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -108,8 +109,28 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${fraunces.variable} ${outfit.variable}`}>
+      {/* ✅ ADD THIS HEAD SECTION */}
+      <head>
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-K7NYLD9EE3"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-K7NYLD9EE3');
+        gtag('config', 'AW-17959479694');
+      `}
+        </Script>
+      </head>
+
       <body>
-        {/* 🔥 SCHEMA MARKUP (VERY IMPORTANT) */}
+        {/* 🔥 SCHEMA MARKUP */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -134,7 +155,7 @@ export default function RootLayout({ children }) {
                 "Electrical Scrap Buying",
               ],
               description:
-                "JJ Scrapbuyers is a leading scrap buyer in Chennai offering doorstep pickup and best prices for all types of scrap including iron, copper, aluminium, AC, batteries and electrical scrap.",
+                "JJ Scrapbuyers is a leading scrap buyer in Chennai offering doorstep pickup and best prices.",
             }),
           }}
         />
